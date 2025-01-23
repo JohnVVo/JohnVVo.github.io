@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
+    <!-- npx tailwindcss -i ./input.css -o ./output.css --watch -->
+    <title>John's Portfolio</title>
+  </head>
+  <body
+    class="flex flex-col scroll-smooth bg-gray bg-gradient-to-l from-gray to-gray-900 text-white"
+  >
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-10 flex h-14 flex-shrink-0 items-center justify-between bg-gradient-to-l from-gray to-gray-900 px-16"
+    >
+      <h1 class="font-bold">John's Portfolio</h1>
+      <nav class="flex h-full text-center">
+        <ul class="flex items-center gap-2">
+          <li>
+            <a
+              href="#section-main"
+              class="rounded-full border border-transparent p-2 hover:border-white hover:bg-white hover:text-gray"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#section-resume"
+              class="rounded-full border border-transparent p-2 hover:border-white hover:bg-white hover:text-gray"
+            >
+              Resume
+            </a>
+          </li>
+          <li class="h-1/2 border"></li>
+          <li class="p-1">
+            <a href="https://github.com/JohnVVo" target="_blank"
+              ><img
+                class="max-h-6 max-w-6"
+                src="assets/images/github.svg"
+                alt="Icon"
+            /></a>
+          </li>
+          <li class="p-1">
+            <a href="https://www.linkedin.com/in/john-v-vo/" target="_blank"
+              ><img
+                class="max-h-6 max-w-6"
+                src="assets/images/linkedin.svg"
+                alt="Icon"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main
+      class="flex h-screen max-h-[calc(100vh-3.5rem)] flex-grow flex-col-reverse items-center text-center md:grid md:grid-cols-2"
+      id="section-main"
+    >
+      <!-- Projects -->
+      <div class="h-full snap-y overflow-y-scroll p-6">
+        <!-- Chat Room -->
+        <div
+          class="relative flex snap-center flex-col items-center justify-center border-b bg-contain bg-center bg-no-repeat font-bold md:h-full"
+          style="background-image: url(assets/images/chatroom.PNG)"
+          id="project-1"
+        >
+          <div
+            class="shadow-l w-1/2 min-w-64 rounded-md bg-gray bg-opacity-90 p-10"
+          >
+            <h2 class="text-2xl">Chat Room</h2>
+            <p class="m-1 text-gray-300">
+              React | Express | MongoDB | Bootstrap
+            </p>
+            <div class="mt-4 flex items-center justify-center gap-4">
+              <a href="https://github.com/JohnVVo" target="_blank"
+                ><img
+                  src="assets/images/github.svg"
+                  alt="Icon"
+                  class="max-h-8 max-w-8"
+              /></a>
+              <button
+                class="hidden rounded-full border border-white p-2 hover:bg-white hover:text-gray"
+              >
+                Preview
+              </button>
+              <a
+                href="https://chatroom-connect.netlify.app/"
+                target="_blank"
+                class="rounded-full border border-white p-2 hover:bg-white hover:text-gray"
+                >Website</a
+              >
+            </div>
+          </div>
+          <a
+            class="absolute bottom-5 hidden w-full justify-center font-normal md:flex"
+            href="#project-2"
+          >
+            <img
+              src="assets/images/angle-small-down.svg"
+              class="max-h-6 max-w-6"
+            />
+          </a>
+        </div>
+        <!-- Typing Test -->
+        <div
+          class="relative flex snap-center flex-col items-center justify-center border-b bg-contain bg-center bg-no-repeat font-bold md:h-full"
+          style="background-image: url(assets/images/typingtest.png)"
+          id="project-2"
+        >
+          <div
+            class="shadow-l w-1/2 min-w-64 rounded-md bg-gray bg-opacity-90 p-10"
+          >
+            <h2 class="text-2xl">Typing Test</h2>
+            <p class="m-1 text-gray-300">HTML/CSS | React</p>
+            <div class="mt-4 flex items-center justify-center gap-4">
+              <a href="https://github.com/JohnVVo" target="_blank"
+                ><img
+                  src="assets/images/github.svg"
+                  alt="Icon"
+                  class="max-h-8 max-w-8"
+              /></a>
+              <button
+                class="hidden rounded-full border border-white p-2 hover:bg-white hover:text-gray"
+              >
+                Preview
+              </button>
+              <a
+                href=""
+                target="_blank"
+                class="hidden rounded-full border border-white p-2 hover:bg-white hover:text-gray"
+                >Website</a
+              >
+            </div>
+          </div>
+          <a
+            class="absolute bottom-5 hidden w-full justify-center font-normal md:flex"
+            href="#project-3"
+          >
+            <img
+              src="assets/images/angle-small-down.svg"
+              class="max-h-6 max-w-6"
+            />
+          </a>
+        </div>
+        <!-- Food Truck Finder -->
+        <div
+          class="relative flex snap-center flex-col items-center justify-center border-b bg-contain bg-center bg-no-repeat font-bold md:h-full"
+          style="background-image: url(assets/images/foodtruckfinder.png)"
+          id="project-3"
+        >
+          <div
+            class="shadow-l w-1/2 min-w-64 rounded-md bg-gray bg-opacity-90 p-10"
+          >
+            <h2 class="text-2xl">Food Truck Finder</h2>
+            <p class="m-1 text-gray-300">HTML/CSS | React | Google Maps API</p>
+            <div class="mt-4 flex items-center justify-center gap-4">
+              <a href="https://github.com/JohnVVo" target="_blank"
+                ><img
+                  src="assets/images/github.svg"
+                  alt="Icon"
+                  class="max-h-8 max-w-8"
+              /></a>
+              <button
+                class="hidden rounded-full border border-white p-2 hover:bg-white hover:text-gray"
+              >
+                Preview
+              </button>
+              <a
+                href=""
+                target="_blank"
+                class="hidden rounded-full border border-white p-2 hover:bg-white hover:text-gray"
+                >Website</a
+              >
+            </div>
+          </div>
+          <a
+            class="absolute bottom-5 hidden w-full justify-center font-normal md:flex"
+            href="#project-1"
+          >
+            <img
+              src="assets/images/angle-small-down.svg"
+              class="max-h-6 max-w-6 rotate-180"
+            />
+          </a>
+        </div>
+      </div>
+      <!-- Hero -->
+      <div class="p-5 font-bold">
+        <h1 class="text-xl">Hello, I'm</h1>
+        <h1 class="text-4xl">John Vo</h1>
+        <p class="m-1 text-gray-300">
+          Computer Science | Software Engineer | Full Stack Developer
+        </p>
+        <!-- Contact -->
+        <div class="flex items-center justify-center">
+          <a
+            href="mailto:3johnvo@gmail.com"
+            class="mt-4 rounded-full border border-white p-2 hover:bg-white hover:text-gray"
+          >
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </main>
+    <!-- Skills -->
+    <div class="m-4 flex hidden h-96 rounded-md bg-gray px-10">
+      <div class="flex flex-grow flex-col items-center justify-center">
+        <div class="text-2xl font-bold">Skills</div>
+        <div
+          class="grid w-1/3 grid-cols-3 place-items-center gap-6 border-t p-6 text-center text-gray-300"
+        >
+          <div class="place-items-center rounded-md">
+            <img
+              src="assets/images/html.png"
+              class="h-16 min-h-16 w-16 min-w-16"
+            />
+            <p class="mt-2">HTML</p>
+          </div>
+          <div class="place-items-center rounded-md">
+            <img
+              src="assets/images/css.png"
+              class="h-16 min-h-16 w-16 min-w-16"
+            />
+            <p class="mt-2">CSS</p>
+          </div>
+          <div class="place-items-center rounded-md">
+            <img
+              src="assets/images/javascript.png"
+              class="h-16 min-h-16 w-16 min-w-16"
+            />
+            <p class="mt-2">JavaScript</p>
+          </div>
+          <div class="place-items-center rounded-md">
+            <img
+              src="assets/images/c.png"
+              class="h-16 min-h-16 w-16 min-w-16"
+            />
+            <p class="mt-2">C</p>
+          </div>
+          <div class="place-items-center rounded-md">
+            <img
+              src="assets/images/cpp.png"
+              class="h-16 min-h-16 w-16 min-w-16"
+            />
+            <p class="mt-2">C++</p>
+          </div>
+          <div class="place-items-center rounded-md">
+            <img
+              src="assets/images/python.png"
+              class="h-16 min-h-16 w-16 min-w-16"
+            />
+            <p class="mt-2">Python</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Resume -->
+    <div
+      class="m-4 flex h-screen flex-col place-items-center rounded-md bg-gray p-10 font-bold"
+    >
+      <h2 class="mb-4 text-2xl">Resume</h2>
+      <embed
+        class="h-full w-full"
+        src="assets/images/Resume (2025).pdf"
+        id="section-resume"
+      />
+    </div>
+  </body>
+  <!-- JavaScript -->
+  <script></script>
+</html>

@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "EcoNaut",
+    "description": [
+      "24-Hour Hackathon @ CSU Fullerton.",
+      "Team project with 3 other developers.",
+      "Promotes global sustability by encouraging the construction of clean energy sources.",
+      "Features AI to predict wind and solar energy productions based on meterological data.",
+      "Models trained using Random Forest and Artificial Neural Networks.",
+      "Visualizes predictions with charts and graphs."
+    ],
+    "github": "https://github.com/nickmarietta/GreenPlacement",
+    "image": { "file": ["EcoNaut.jpg", "EcoNaut2.jpg", "EcoNaut3.jpg"] },
+    "utility": ["React, Tailwind, FastAPI, TensorFlow"],
+    "color": "text-indigo-600"
+  },
+  {
+    "id": 2,
+    "name": "To-do List",
+    "description": [
+      "Inpsired by Trello; Allows users to organize their tasks into lists with Drag and Drop capabilities.",
+      "Draggable tasks can be moved between lists and reordered within the same list."
+    ],
+    "github": "https://github.com/JohnVVo/DragDrop",
+    "image": { "file": ["ToDo.PNG"] },
+    "utility": ["React, Tailwind"],
+    "color": "text-blue-400"
+  },
+  {
+    "id": 3,
+    "name": "Chat Room",
+    "description": [
+      "Enter a room of up to 10 users and chat in real-time.",
+      "Implements REST API leveraging MongoDB for user authentication and temporary authorization tokens.",
+      "Protected chat rooms that can only be entered while inputting a room name."
+    ],
+    "github": "https://github.com/JohnVVo/MERN-chatroom-app",
+    "image": { "file": ["ChatRoom.png", "ChatRoom2.png"] },
+    "utility": ["React, Bootstrap, Express, Socket.IO, MongoDB"],
+    "color": "text-stone-700"
+  },
+  {
+    "id": 4,
+    "name": "Motor Munchies",
+    "description": [
+      "Team project with 5 other members.",
+      "Discover registered food truck locations in your area. Advertise your food truck to the public.",
+      "Interact with Google Maps' API to see information about each vendor.",
+      "Sign up as a vendor to access a dashboard to create and manage your food truck's profile."
+    ],
+    "github": "https://github.com/mattmarietta/motor_munchies",
+    "image": { "file": ["MotorMunchies.png"] },
+    "utility": ["React, HTML/CSS, Google Maps API"],
+    "color": "text-blue-500"
+  },
+  {
+    "id": 5,
+    "name": "DonkeyType",
+    "description": [
+      "A take on the popular typing test game, MonkeyType. Made minimal with preserved user experience.",
+      "Receive statistical feedback on your typing performance, such as speed and accuracy."
+    ],
+    "github": "https://github.com/JohnVVo/ReactJS-DonkeyType",
+    "image": { "file": ["TypingTest.png"] },
+    "utility": ["React, HTML/CSS"],
+    "color": "text-blue-900"
+  },
+  {
+    "id": 6,
+    "name": "View More Projects",
+    "description": [
+      "Want to see more of my projects? Check out my GitHub profile!"
+    ],
+    "github": "https://github.com/JohnVVo",
+    "image": { "file": ["Sample.png"] },
+    "utility": [],
+    "color": "text-blue-900"
+  }
+]

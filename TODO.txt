@@ -1,0 +1,5 @@
+- Replace main scrollbar with progress bar
+- Different colored backgrounds for section 3
+- Add links to contacts
+- Add carousel for projects with multiple images
+- Stagger bullet points in section 3

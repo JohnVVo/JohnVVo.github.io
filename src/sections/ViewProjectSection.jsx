@@ -57,7 +57,7 @@ const ViewProjectSection = () => {
 
   return (
     <div className="h-screen p-4">
-      <div className="h-full flex flex-col md:flex-row border rounded-lg p-4 items-center bg-[url('./stacked_waves1.svg')] bg-no-repeat bg-cover bg-center">
+      <div className="h-full flex flex-col md:flex-row border rounded-lg p-4 items-center bg-[url('/stacked_waves1.svg')] bg-no-repeat bg-cover bg-center">
         {activeProjectId ? (
           <div className="w-full h-full flex items-center">
             <div className="w-2/5 h-full  flex flex-col gap-4 justify-center items-center">

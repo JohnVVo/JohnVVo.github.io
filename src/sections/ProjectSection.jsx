@@ -7,7 +7,7 @@ import ProjectMarquee from "../components/ProjectMarquee";
 const ProjectSection = () => {
   return (
     <div className="h-screen p-4">
-      <div className="h-full flex flex-col md:flex-row border rounded-lg px-4 items-center bg-[url('./wave2.svg')] bg-no-repeat bg-cover bg-center">
+      <div className="h-full flex flex-col md:flex-row border rounded-lg px-4 items-center bg-[url('/wave2.svg')] bg-no-repeat bg-cover bg-center">
         <div className="flex flex-col ">
           {/* <UtilityMarquee /> */}
           <h2 className="text-center">Explore my projects!</h2>

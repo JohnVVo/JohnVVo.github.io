@@ -5,8 +5,10 @@ import { useParallaxContext } from "../sections/HeroSection";
 
 const NameTag = () => {
   const { containerRef, x, y, rotateX, rotateY } = useParallaxContext();
-  const springX = useSpring(x);
-  const springY = useSpring(y);
+  const springX = useSpring(x, { stiffness: 60, damping: 20 });
+  const springY = useSpring(y, { stiffness: 60, damping: 20 });
+  const springRotateX = useSpring(rotateX, { stiffness: 60, damping: 20 });
+  const springRotateY = useSpring(rotateY, { stiffness: 60, damping: 20 });
   useEffect(() => {
     if (!containerRef.current) return;
 
@@ -29,24 +31,18 @@ const NameTag = () => {
         Math.min(maxOffset, relativeY * resistance)
       );
 
-      animate(x, offsetX, { duration: 0.3, easing: "ease-out" });
-      animate(y, offsetY, { duration: 0.3, easing: "ease-out" });
+      x.set(offsetX);
+      y.set(offsetY);
 
-      animate(rotateX, (-offsetY / maxOffset) * maxRotate, {
-        duration: 0.3,
-        easing: "ease-out",
-      });
-      animate(rotateY, (offsetX / maxOffset) * maxRotate, {
-        duration: 0.3,
-        easing: "ease-out",
-      });
+      rotateX.set((-offsetY / maxOffset) * maxRotate);
+      rotateY.set((offsetX / maxOffset) * maxRotate);
     };
 
     const resetPosition = () => {
-      animate(x, 0, { duration: 0.4, easing: "ease-out" });
-      animate(y, 0, { duration: 0.4, easing: "ease-out" });
-      animate(rotateX, 0, { duration: 0.5, easing: "ease-out" });
-      animate(rotateY, 0, { duration: 0.5, easing: "ease-out" });
+      x.set(0);
+      y.set(0);
+      rotateX.set(0);
+      rotateY.set(0);
     };
 
     containerRef.current.addEventListener("mousemove", handleMouseMove);
@@ -56,17 +52,16 @@ const NameTag = () => {
       containerRef.current?.removeEventListener("mousemove", handleMouseMove);
       containerRef.current?.removeEventListener("mouseleave", resetPosition);
     };
-  }, [x, y]);
+  }, [x, y, rotateX, rotateY]);
 
   return (
     <motion.div
       className="bg-red-400 text-white w-72 place-items-center text-center p-2 rounded-lg shadow-lg"
-      transition={{ duration: 0.7 }}
       style={{
         x: springX,
         y: springY,
-        rotateX,
-        rotateY,
+        rotateX: springRotateX,
+        rotateY: springRotateY,
         transformPerspective: 600,
       }}
     >

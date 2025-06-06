@@ -9,8 +9,10 @@ import { usePopupContext } from "../sections/HeroSection";
 const Profile = ({ details }) => {
   const { popupId, setPopupId } = usePopupContext();
   const { x, y, rotateX, rotateY } = useParallaxContext();
-  const springX = useSpring(x);
-  const springY = useSpring(y);
+  const springX = useSpring(x, { stiffness: 60, damping: 20 });
+  const springY = useSpring(y, { stiffness: 60, damping: 20 });
+  const springRotateX = useSpring(rotateX, { stiffness: 60, damping: 20 });
+  const springRotateY = useSpring(rotateY, { stiffness: 60, damping: 20 });
 
   const handlePopupClick = (e) => {
     const id = e.target.id;
@@ -29,8 +31,8 @@ const Profile = ({ details }) => {
         style={{
           x: useTransform(springX, (v) => v * 0.5),
           y: useTransform(springY, (v) => v * 0.5),
-          rotateX: useTransform(rotateX, (v) => v * 0.5),
-          rotateY: useTransform(rotateY, (v) => v * 0.5),
+          rotateX: useTransform(springRotateX, (v) => v * 0.5),
+          rotateY: useTransform(springRotateY, (v) => v * 0.5),
           transformPerspective: 600,
         }}
       >

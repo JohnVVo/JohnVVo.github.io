@@ -18,7 +18,7 @@ const NameTag = () => {
       const relativeX = e.clientX - rect.left - rect.width / 2;
       const relativeY = e.clientY - rect.top - rect.height / 2;
 
-      const maxOffset = 50;
+      const maxOffset = 100;
       const maxRotate = 20;
       const resistance = 0.1;
 
